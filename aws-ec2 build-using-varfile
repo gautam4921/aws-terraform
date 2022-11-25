@@ -1,0 +1,40 @@
+#https://jhooq.com/terraform-module/#documentTop
+
+//Script 2
+//variables.tf
+variable "amid" {
+  type = string
+  default = "ami-0cbf975b93d9cd3f9"
+}
+variable "region" {
+  type = string
+  default = "us-east-2"
+}
+variable "instance_type" {
+  type =string
+  default = "t2.micro"
+}
+variable "keyname" {
+  type = string
+  default = "ubu-ohio-kp"
+}
+variable "name" {
+  type = string
+  default = "Ec2-demo"
+}
+-------------------------------
+ec2-terraform01
+-------------------------
+//main.tf
+provider "aws" {
+ region = var.region
+}
+resource "aws_instance" "ins1" {
+  ami = var.amid
+  instance_type = var.instance_type
+  key_name = var.keyname
+  tags = {
+    "Name" = var.name
+  }
+  
+}
