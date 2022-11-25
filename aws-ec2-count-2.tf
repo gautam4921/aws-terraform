@@ -1,8 +1,6 @@
 #Second script with public ip and instance count = 2 
 provider "aws" {
     region = "us-east-2"
-    access_key = "AKIAUSGG6HHLGNGUSH57"
-    secret_key = "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"
 }
 resource "aws_instance" "awsins01" {
   ami = "ami-0cbf975b93d9cd3f9"
