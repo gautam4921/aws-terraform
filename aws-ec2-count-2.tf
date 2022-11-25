@@ -1,6 +1,6 @@
 #Second script with public ip and instance count = 2 
 provider "aws" {
-    region = "us-east-2"  
+    region = "us-east-3"  
 }
 resource "aws_instance" "awsins01" {
   ami = "ami-0cbf975b93d9cd3f9"
