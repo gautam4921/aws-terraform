@@ -1,8 +1,8 @@
 #Second script with public ip and instance count = 2 
 provider "aws" {
     region = "us-east-2"
-    access_key = "AKIAUSGG6HHLD5BY4UGA"
-    secret_key = "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"
+    access_key = "AKIAUSGG6HHLGNGUSH57"
+    secret_key = "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"
 }
 resource "aws_instance" "awsins01" {
   ami = "ami-0cbf975b93d9cd3f9"
@@ -11,7 +11,7 @@ resource "aws_instance" "awsins01" {
   vpc_security_group_ids = ["sg-039e7f1a6a983f220"]
   key_name = "ubu-ohio-kp"
   associate_public_ip_address = true
-  count = 3
+  count = 2
   tags = {
     "Name" = "ec2-terraform"
   }
